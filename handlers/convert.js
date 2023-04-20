@@ -21,7 +21,7 @@ const convert = async (req, res) => {
         songTitle: response.title,
         songLink: response.link,
       });
-    return res.render("indedx", { success: false, message: response.msg });
+    return res.render("index", { success: false, message: response.msg });
   } catch (err) {
     console.log(err);
     return res.status(500).send("Internal server error");

@@ -7,7 +7,7 @@ const { convert } = require("./handlers/convert");
 
 const app = express();
 
-const PORT = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
@@ -19,5 +19,5 @@ app.get("/", pages.home);
 app.post("/convert-mp3", convert);
 
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+  console.log(`App started\nVisit http://localhost:${PORT}/`);
 });
