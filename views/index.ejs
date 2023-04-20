@@ -15,6 +15,38 @@
     <title>Youtube converter</title>
   </head>
   <body>
-    <h1>Hello im being served</h1>
+    <h1 class="index--heading">
+      <!-- <i class="fa-brands fa-youtube"></i> -->Youtube to MP3
+    </h1>
+    <div class="main--wrapper">
+      <div class="top--containter">
+        <form action="/convert-mp3" method="POST" class="input--form">
+          <label for="videoLink" class="input--label">Enter video link</label>
+          <div class="input--fields">
+            <input
+              type="text"
+              name="videoLink"
+              placeholder="Link here"
+              class="input--field"
+            />
+            <button type="submit" class="convert--btn">Convert</button>
+          </div>
+        </form>
+      </div>
+      <div class="bottom--container">
+        <!-- prettier-ignore -->
+        <% if(typeof success != "undefined" && success) { %>
+        <div class="success">
+          <p><%= songTitle %></p>
+          <a href="<%= songLink %>" class="download--btn">Download</a>
+        </div>
+        <!-- prettier-ignore -->
+        <% } else if(typeof success != "undefined" && !success) { %>
+        <div class="errors">
+          <p><%= errMessage %></p>
+        </div>
+        <% } %>
+      </div>
+    </div>
   </body>
 </html>
