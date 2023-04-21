@@ -12,7 +12,7 @@ After installing or cloning the repo on your machine you will need to create a `
 
 The port field is not mandatory and if not added the app will default to port **3000**
 
-Now having done that navigate to the youtube-compiler folder in your terminal of choice and run
+Now having done that navigate to the youtube-converter folder in your terminal of choice and run
 
 - `npm install`
 
